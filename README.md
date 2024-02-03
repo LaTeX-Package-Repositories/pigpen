@@ -7,7 +7,11 @@ it is still used by schoolchildren.
 The pigpen cipher package provides the font and the necessary wrappers
 (style file, etc.) in order to write Pigpen ciphers.
 
+License: LPPL 1.3c https://www.latex-project.org/lppl.txt
+
 Oliver Corff, December 2008
 
-Map file updated 2024-02-03
+Map file updated, David Carlisle 2024-02-03
+
+
 
