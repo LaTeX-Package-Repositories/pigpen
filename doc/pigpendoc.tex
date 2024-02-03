@@ -1,0 +1,108 @@
+\documentclass[a4paper]{article}
+\usepackage{pigpen}
+
+\newcommand\exa{\nopagebreak \begin{flushleft}\smallskip \nopagebreak
+                \begin{minipage}[t]{6cm}\sloppy}
+\newcommand\exb{\end{minipage}\kern 1cm\begin{minipage}[t]{8cm}\sloppy }
+\newcommand\exc{\end{minipage}\kern -3cm \smallskip\end{flushleft}}
+
+\title{{\pigpenfont PIG PEN FOR TEX}\\[0.5cm]
+	The Pigpen Cipher for \TeX\ 0.2}
+\author{Oliver Corff}
+\date{December 07, 2008}
+\begin{document}
+\maketitle
+
+
+\section{The Pigpen cipher}
+
+The \TeX\ Pigpen cipher font is a small hack\footnote{%
+	The \TeX\ Pigpen cipher was inspired by a discussion on
+	\texttt{comp.text.tex} in December 2008.} 
+to type the so-called masonic cipher, or Freemason's cipher,
+which is a simple substitution cipher based on a grid. 
+A 3x3 grid is filled with the letters A to I and J to R.
+\begin{center}
+\begin{minipage}[t]{3cm}%
+\begin{tabular}{c|c|c}
+	A&B&C\\
+	\hline
+	D&E&F\\
+	\hline
+	G&H&I\\
+\end{tabular}\end{minipage}%
+\begin{minipage}[t]{3cm}%
+\begin{tabular}{c|c|c}
+	J.&K.&L.\\
+	\hline
+	M.&N.&O.\\
+	\hline
+	P.&Q.&R.\\
+\end{tabular}\end{minipage}
+\begin{minipage}[t]{3cm}%
+\begin{tabular}{ccc}
+	 &S& \\
+	T&$\times$&U\\
+	 &V& \\
+\end{tabular}\end{minipage}%
+\begin{minipage}[t]{3cm}%
+\begin{tabular}{ccc}
+	 &W.& \\
+	X.&$\times$&Y.\\
+	 &Z.&\\
+\end{tabular}\end{minipage}
+\end{center}
+
+\begin{center}
+{\pigpenfont
+\begin{minipage}[t]{3cm}%
+\begin{tabular}{ccc}
+	A&B&C\\
+	D&E&F\\
+	G&H&I\\
+\end{tabular}\end{minipage}%
+\begin{minipage}[t]{3cm}%
+\begin{tabular}{ccc}
+	J&K&L\\
+	M&N&O\\
+	P&Q&R\\
+\end{tabular}\end{minipage}
+\begin{minipage}[t]{3cm}%
+\begin{tabular}{ccc}
+	 &S& \\
+	T&$\times$&U\\
+	 &V& \\
+\end{tabular}\end{minipage}%
+\begin{minipage}[t]{3cm}%
+\begin{tabular}{ccc}
+	  &W&\\
+	X&$\times$&Y\\
+	  &Z&\\
+\end{tabular}\end{minipage}}
+\end{center}
+
+The letters in this grid are simply replaced by the inner edges 
+of their box within the grid. The subset of letters J to R is marked
+by a dot.
+
+The letters S, T, U and V are arranged in the four quadrants of an X,
+the letters W, X, Y and Z follow this arragement but are marked with
+a dot. Again, the letters are substituted by the inner edges of their
+respective corner.
+
+\section{Usage}
+
+In the preamble of a \LaTeXe\ document, the package is declared by
+saying \verb|\usepackage{pigpen}|. Options are not available.
+There is only one user command, \verb|\pigpenfont|:
+\exa
+	{\pigpenfont LUCAS}
+\exb
+	\begin{verbatim}
+	{\pigpenfont LUCAS}
+	\end{verbatim}
+\exc
+
+
+
+\end{document}
