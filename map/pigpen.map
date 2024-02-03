@@ -4,5 +4,6 @@
 % Part of the Pigpen package.
 %
 % Oliver Corff, 2008
+% Updated to use < David Carlisle 2024
 % 
-pigpen <<pigpen.pfa
+pigpen <pigpen.pfa

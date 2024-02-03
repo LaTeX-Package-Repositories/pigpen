@@ -8,3 +8,5 @@ The pigpen cipher package provides the font and the necessary wrappers
 (style file, etc.) in order to write Pigpen ciphers.
 
 Oliver Corff, December 2008
+Map file updated 2024-02-03
+

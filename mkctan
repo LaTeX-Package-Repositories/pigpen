@@ -1,0 +1,15 @@
+#!/bin/bash
+
+cd doc
+pdflatex pigpendoc.tex
+pdflatex pigpendoc.tex
+
+cp pigpendoc.pdf ..
+
+cd ../..
+
+rm -f pigpen.zip
+
+zip  pigpen.zip pigpen/{README.md,pigpendoc.pdf} pigpen/*/*.{tex,map,mf,sty,tfm,pfa}
+
+mv pigpen.zip pigpen
